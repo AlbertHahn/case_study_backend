@@ -1,1 +1,5 @@
-# vector_case_study_backend
+# case_study_ssp_backend
+
+# Requirements
+
+`pipx`

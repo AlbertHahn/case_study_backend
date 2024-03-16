@@ -1,7 +1,10 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, PositiveInt
 from typing import List
 
 class InputPayload(BaseModel):
-    list_a : List[int]
-    list_b : List[int]
-    target: int
+    list_a : List[PositiveInt]
+    list_b : List[PositiveInt]
+    target: PositiveInt
+    
+    class Config:
+        orm_mode = True

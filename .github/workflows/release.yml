@@ -1,12 +1,12 @@
-name: Python Test
+name: "Release"
 
-on:
+on: # yamllint disable-line rule:truthy
   push:
-    branches:
-      - master
+    tags:
+      - "**"
 
 jobs:
-  test:
+  release:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -34,5 +34,10 @@ jobs:
       - name: Install the project dependencies
         run: poetry install
 
-      - name: Run the automated tests (for example)
-        run: poetry run pytest -v
+      - name: Prepare package for release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          poetry run semantic-release publish

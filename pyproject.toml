@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "app"
-version = "0.1.0"
+version = "0.1.0-dev"
 description = ""
 authors = ["Albert Hahn <albert.hahn@mailbox.org>"]
 readme = "README.md"
@@ -15,6 +15,7 @@ pytest = "^8.1.1"
 httpx = "^0.27.0"
 coverage = "^7.4.4"
 pre-commit = "^3.6.2"
+python-semantic-release = "^9.1.1"
 
 [tool.ruff]
 ignore = ["E712"]
@@ -22,3 +23,14 @@ ignore = ["E712"]
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.semantic_release]
+version_variable = "pyproject.toml:version" # version location
+branch = "master"                           # branch to make releases of
+changelog_file = "CHANGELOG.md"             # changelog file
+build_command = "poetry build"              # build dists
+dist_path = "dist/"                         # where to put dists
+upload_to_release = true                    # auto-create GitHub release
+upload_to_pypi = false                      # don't auto-upload to PyPI
+remove_dist = false                         # don't remove dists
+patch_without_tag = true                    # patch release by default

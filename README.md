@@ -8,5 +8,11 @@
 
 # Getting Started
 
+Optional:
+`pre-commit install`
+
 Initialize dependencies and packages
-`poetry install`
+```
+poetry install \
+poetry shell
+```

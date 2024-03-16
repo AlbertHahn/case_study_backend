@@ -1,1 +1,27 @@
-# test
+name: Python-Test
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Set up Dependencies
+        run: |
+          curl -sSL https://install.python-poetry.org | POETRY_HOME=/opt/poetry python && \
+          cd /usr/local/bin && \
+          ln -s /opt/poetry/bin/poetry && \
+          poetry config virtualenvs.create false
+          poetry install --no-root --only main
+          pytest

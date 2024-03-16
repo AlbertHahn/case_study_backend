@@ -2,7 +2,7 @@
 
 
 ![Docker Workflow](https://github.com/AlbertHahn/case_study_backend/actions/workflows/image.yml/badge.svg)
-
+![Python Tests](https://github.com/AlbertHahn/case_study_backend/actions/workflows/test.yml/badge.svg)
 
 # Requirements
 

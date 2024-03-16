@@ -17,7 +17,8 @@ def test_multiple_subset_sum_api_successful(client: TestClient):
     )
 
     assert 200 <= response.status_code < 300
-    assert True in response.json()
+    result = response.json()
+    assert result == True
 
 
 def test_multiple_subset_sum_api_unsuccessful(client: TestClient):
@@ -34,4 +35,5 @@ def test_multiple_subset_sum_api_unsuccessful(client: TestClient):
     )
 
     assert 200 <= response.status_code < 300
-    assert False in response.json()
+    result = response.json()
+    assert result == False

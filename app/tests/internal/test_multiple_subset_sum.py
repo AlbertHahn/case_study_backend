@@ -10,8 +10,8 @@ def test_subset_sum_recursive_true():
     """
 
     inputpayload = InputPayload(list_a=[3, 5, 7], list_b=[3, 5, 7], target=10)
-
-    assert True in subset_sum_recursive(inputpayload)
+    result = subset_sum_recursive(inputpayload)
+    assert result == True
 
 
 def test_subset_sum_recursive_false():
@@ -23,4 +23,5 @@ def test_subset_sum_recursive_false():
 
     inputpayload = InputPayload(list_a=[3, 5, 7], list_b=[3, 5, 7], target=300)
 
-    assert False in subset_sum_recursive(inputpayload)
+    result = subset_sum_recursive(inputpayload)
+    assert result == False

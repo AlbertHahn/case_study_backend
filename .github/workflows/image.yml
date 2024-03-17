@@ -44,5 +44,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: 0.1.0
-          labels: ${{ steps.meta.outputs.labels }}
+          tags: ${{ env.REGISTRY }}/${{ github.repository_owner }}/${{ env.IMAGE_NAME }}:latest

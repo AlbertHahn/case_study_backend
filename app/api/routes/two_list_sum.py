@@ -1,24 +1,15 @@
 from fastapi import APIRouter
 
-from app.models.inputpayload import InputPayload
-from app.internal.two_list_sum import two_list_sum, two_list_sum_optimized
+from app.models.models import InputPayload
+from app.internal.two_list_sum import two_list_sum
 
 router = APIRouter()
 
 
-@router.post("/unoptimized")
+@router.post("/")
 def unoptimized_endpoint(inputpayload: InputPayload):
     """
     This function has a time complexity of O(n*m)
     """
     result = two_list_sum(inputpayload)
-    return result
-
-
-@router.post("/optimized")
-def optimized_endpoint(inputpayload: InputPayload):
-    """
-    This function has a time complexity of O(n+m)
-    """
-    result = two_list_sum_optimized(inputpayload)
     return result

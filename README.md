@@ -39,6 +39,16 @@ __Docker-Compose__
 docker-compose up -d
 ```
 
+## API Documentation
+
+You can visit the API documentation after starting the application at [docs](localhost:8080/api/v1/docs) or get the openapi specification on [openapi](localhost:8080/api/v1/openapi.json)
+
+## Architecture
+
+Diagram with the description of the endpoints
+
+![alt text](diagrams/API-Endpoints.drawio.png)
+
 ## Directory Structure
 
 The directory structure follows some of the best practices including the example of the creator of FastAPI [Sebastián Ramírez (Tiangolo)](https://github.com/tiangolo/full-stack-fastapi-template/tree/master) and tips I have gathered from [fastapi-best-practices](https://github.com/zhanymkanov/fastapi-best-practices) as well as my own experience.

@@ -1,7 +1,5 @@
 FROM python:3.11.0
 
-FROM python:3.11.0
-
 WORKDIR /app/
 
 # Install Poetry

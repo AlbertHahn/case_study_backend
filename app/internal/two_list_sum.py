@@ -9,7 +9,7 @@ def two_list_sum(twolisttarget: TwoListTarget):
     set_b = set(twolisttarget.list_b)
     target = twolisttarget.target
 
-    # Base cases
+    # Base case
     if target == 0:
         return True
 

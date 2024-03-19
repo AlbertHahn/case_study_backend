@@ -5,13 +5,15 @@
 ![Python Tests](https://github.com/AlbertHahn/case_study_backend/actions/workflows/test.yml/badge.svg)
 [![Release](https://github.com/AlbertHahn/case_study_backend/actions/workflows/release-please.yml/badge.svg)](https://github.com/AlbertHahn/case_study_backend/actions/workflows/release-please.yml)
 
+This repository demonstrates a web API backend designed to calculate the target sum from two provided lists.
+
 # Requirements
 
 [pipx](https://github.com/pypa/pipx) pipx is a tool to help you install and run end-user applications written in Python \
 [poetry](https://python-poetry.org/docs/) python packaging and dependency management tool \
 [pre-commit](https://pre-commit.com/) (optional) framework for managing and maintaining multi-language pre-commit hooks
 
-# Getting Started
+## Getting Started
 
 Initialize dependencies and packages
 
@@ -20,7 +22,7 @@ poetry install
 poetry shell
 ```
 
-## Start the application
+### Start the application
 
 ```bash
 uvicorn app.main:app --host 0.0.0.0 --port 8080 --reload
@@ -39,15 +41,28 @@ __Docker-Compose__
 docker-compose up -d
 ```
 
-## API Documentation
+### API Documentation
 
 You can visit the API documentation after starting the application at [docs](http://localhost:8080/api/v1/docs) or get the openapi specification on [openapi](http://localhost:8080/api/v1/openapi.json)
 
-## Architecture
+## API Architecture
 
 Diagram with the description of the endpoints
 
 ![alt text](diagrams/API-Endpoints.drawio.png)
+
+## Continouos Integration
+
+For the CI part of the application GitHub Actions is being used.
+
+![alt text](diagrams/API-CI.drawio.png)
+
+### Workflow Files
+
+- [Docker Workflow](actions/workflows/image.yml) responsible for the creation of the Docker container
+- [Python Tests](actions/workflows/test.yml) executing tests if /app has changed files
+- [Release](actions/workflows/release-please.yml) release action for a new version if a push to the master branch occurred
+## Continouos Delivery/Deployment
 
 ## Directory Structure
 

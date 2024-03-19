@@ -9,7 +9,7 @@ on:
 jobs:
 
   python-test:
-    uses: .github/workflows/test.yml
+    uses: ./.github/workflows/test.yml
 
   release-please:
     runs-on: ubuntu-latest

@@ -6,7 +6,7 @@ from app.core.config import settings
 def test_test_two_list_sum_api_successful(client: TestClient):
     """
     GIVEN a FastAPI app client and input parameter that are known to be successfully calculated
-    WHEN the 'recursive' endpoint is requested (POST) with those known parameters
+    WHEN the 'two-list-sum' endpoint is requested (POST) with those known parameters
     THEN check if the response is valid
     """
 
@@ -21,8 +21,8 @@ def test_test_two_list_sum_api_successful(client: TestClient):
 
 def test_test_two_list_sum_api_unsuccessful(client: TestClient):
     """
-    GIVEN a FastAPI app client and input parameter that are known to be successfully calculated
-    WHEN the 'recursive' endpoint is requested (POST) with those known parameters
+    GIVEN a FastAPI app client and input parameter that are known to result in an error
+    WHEN the 'two-list-sum' endpoint is requested (POST) with those known parameters
     THEN check if the response is valid
     """
 

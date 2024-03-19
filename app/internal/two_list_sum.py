@@ -1,15 +1,13 @@
-from app.models.models import InputPayload
-
-# Recursive calculation of the subset sum problem
+from app.models.models import TwoListTarget
 
 
-def two_list_sum(inputpayload: InputPayload):
+def two_list_sum(twolisttarget: TwoListTarget):
     """
     This function has a time complexity of O(n+m)
     """
-    set_a = set(inputpayload.list_a)
-    set_b = set(inputpayload.list_b)
-    target = inputpayload.target
+    set_a = set(twolisttarget.list_a)
+    set_b = set(twolisttarget.list_b)
+    target = twolisttarget.target
 
     # Base cases
     if target == 0:

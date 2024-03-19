@@ -51,19 +51,6 @@ Diagram with the description of the endpoints
 
 ![alt text](diagrams/API-Endpoints.drawio.png)
 
-## Continouos Integration
-
-For the CI part of the application GitHub Actions is being used.
-
-![alt text](diagrams/API-CI.drawio.png)
-
-### Workflow Files
-
-- [Docker Workflow](actions/workflows/image.yml) responsible for the creation of the Docker container
-- [Python Tests](actions/workflows/test.yml) executing tests if /app has changed files
-- [Release](actions/workflows/release-please.yml) release action for a new version if a push to the master branch occurred
-
-## Continouos Delivery/Deployment
 
 ## Directory Structure
 
@@ -90,3 +77,28 @@ The directory structure follows some of the best practices including the example
     └── internal
         └── test_two_list_sum.py
 ```
+
+
+## Continouos Integration
+
+For the CI part of the application GitHub Actions is being used.
+
+![alt text](diagrams/API-CI.drawio.png)
+
+### Workflow Files
+
+- [Docker Workflow](actions/workflows/image.yml) responsible for the creation of the Docker container
+- [Python Tests](actions/workflows/test.yml) executing tests if /app has changed files
+- [Release](actions/workflows/release-please.yml) release action for a new version if a push to the master branch occurred
+
+## Continouos Delivery/Deployment
+
+The CD architecture should be realized in AWS EKS with a GitOps strategy.
+
+![alt text](diagrams/API-CD.drawio.png)
+
+### Repositories
+
+- Backend Repository (This repo) should contain the application code and container at it's registry
+- Infrastructure Repository is for deploying the EKS Cluster onto AWS
+- Flux Repository should contain the configuration files for the API to deploy it to EKS and configuration files for the Flux-System itself

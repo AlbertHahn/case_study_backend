@@ -6,8 +6,8 @@ on:
     paths:
       - app/**
 
-
 jobs:
+
   test:
     runs-on: ubuntu-latest
     steps:

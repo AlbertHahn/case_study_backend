@@ -41,7 +41,7 @@ docker-compose up -d
 
 ## API Documentation
 
-You can visit the API documentation after starting the application at [docs](localhost:8080/api/v1/docs) or get the openapi specification on [openapi](localhost:8080/api/v1/openapi.json)
+You can visit the API documentation after starting the application at [docs](http://localhost:8080/api/v1/docs) or get the openapi specification on [openapi](http://localhost:8080/api/v1/openapi.json)
 
 ## Architecture
 

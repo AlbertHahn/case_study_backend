@@ -51,7 +51,7 @@ Diagram with the description of the endpoints
 
 ![alt text](diagrams/API-Endpoints.drawio.png)
 
-## Continouos Integration
+## Continuous Integration
 
 For the CI part of the application GitHub Actions is being used.
 

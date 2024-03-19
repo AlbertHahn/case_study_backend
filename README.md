@@ -99,6 +99,6 @@ The CD architecture should be realized in AWS EKS with a GitOps strategy.
 
 ### Repositories
 
-- Backend Repository (This repo) should contain the application code and container at it's registry
-- Infrastructure Repository is for deploying the EKS Cluster onto AWS
+- Backend Repository (this repo) should contain the application code and container at it's registry
+- Infrastructure Repository is for deploying the EKS Cluster to AWS
 - Flux Repository should contain the configuration files for the API to deploy it to EKS and configuration files for the Flux-System itself

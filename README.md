@@ -51,7 +51,7 @@ Diagram with the description of the endpoints
 
 ![alt text](diagrams/API-Endpoints.drawio.png)
 
-## Continuous Integration
+## Continouos Integration
 
 For the CI part of the application GitHub Actions is being used.
 
@@ -62,6 +62,7 @@ For the CI part of the application GitHub Actions is being used.
 - [Docker Workflow](actions/workflows/image.yml) responsible for the creation of the Docker container
 - [Python Tests](actions/workflows/test.yml) executing tests if /app has changed files
 - [Release](actions/workflows/release-please.yml) release action for a new version if a push to the master branch occurred
+
 ## Continouos Delivery/Deployment
 
 ## Directory Structure
